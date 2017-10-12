@@ -16,7 +16,6 @@ public class SimpleTriggerRunner {
     public static void main(String args[]){
         try {
             //①创建一个JobDetail实例，指定HelloJob
-
             JobDetail jobDetail = JobBuilder.newJob(HelloJob.class).withIdentity("job1","group1").build();
             //②通过SimpleTrigger定义调度规则：马上启动，每2秒运行一次，共运行100次
             Trigger trigger = TriggerBuilder.newTrigger()
